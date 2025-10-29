@@ -3,14 +3,15 @@
 
 
 def prompt_guess(length: int) -> str:
-    pass
+    guess=input('Please enter a guess')
+    return guess
 
 
 def print_feedback(guess: str, bulls: int, cows: int) -> None:
-    pass
+    print(guess,bulls,cows)
 
 def print_status(state: dict) -> None:
-    pass
+    print(state['tries_used'],state['history'])
 
-def print_result(state: dict, won: bool) -> None:
-    pass
+def print_result(state: dict) -> None:
+        print(state['secret'])

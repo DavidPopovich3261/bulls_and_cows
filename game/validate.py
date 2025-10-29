@@ -1,6 +1,6 @@
 
 
-def is_valid_guess(guess: str, length: int, *, unique_digits: bool = True) -> tuple[bool, str]:
+def is_valid_guess(guess: str, length: int, unique_digits: bool = True)->bool:
     flag=True
     if len(guess)==length:
         if not guess.isdigit():
@@ -14,11 +14,11 @@ def is_valid_guess(guess: str, length: int, *, unique_digits: bool = True) -> tu
                     print()
                 else:
                     guess2+=i
-    return flag ,guess
+    return flag
 
 
 
-def is_new_guess(guess: str, history: set[str]) -> bool:
-    if guess in history:
+def is_new_guess(guess: str, seen) -> bool:
+    if guess in seen:
         return False
     return True

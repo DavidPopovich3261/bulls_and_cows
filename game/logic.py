@@ -3,7 +3,7 @@
 
 
 
-def score_guess(secret: str, guess: str) -> tuple[int, int]:
+def score_guess(secret: str, guess: str,) -> tuple[int, int]:
     bulls=0
     cows=0
     for i,y in enumerate(guess):
@@ -30,8 +30,8 @@ def init_state(secret: str, length: int, max_tries: int | None, unique_digits: b
         "tries_used": 0,
         "unique_digits": unique_digits,
         "allow_leading_zero": bool,
-        "history": list[tuple[str, int, int]],  # [(guess, bulls, cows), ...]
-        "seen": set[str]  # ניחושים שנעשו
+        "history": [],  # [(guess, bulls, cows), ...]
+        "seen": []  # ניחושים שנעשו
     }
     return state
 
