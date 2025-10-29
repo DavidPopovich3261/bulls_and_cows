@@ -14,7 +14,7 @@ def is_valid_guess(guess: str, length: int, unique_digits: bool = True)->bool:
                     print()
                 else:
                     guess2+=i
-    return flag
+        return flag
 
 
 
